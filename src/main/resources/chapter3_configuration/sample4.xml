@@ -1,0 +1,21 @@
+<configuration>
+
+    <appender name="STDOUT"
+              class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>
+                %d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n
+            </pattern>
+        </encoder>
+    </appender>
+
+    <!-- Let us note that the basic-selection rule depends on the effective level of the logger being invoked, not the level of the logger where appenders are attached.
+        Logback will first determine whether a logging statement is enabled or not, and if enabled, it will invoke the appenders found in the logger hierarchy, regardless of their level. -->
+    <logger name="chapters.configuration" level="INFO" />
+
+    <!-- turn OFF all logging (children can override) -->
+    <root level="OFF">
+        <appender-ref ref="STDOUT" />
+    </root>
+
+</configuration>

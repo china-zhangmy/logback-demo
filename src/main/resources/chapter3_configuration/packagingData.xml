@@ -1,0 +1,18 @@
+<!-- Packaging data can be very useful in identifying software versioning issues.
+    However, it is rather expensive to compute, especially in application where exceptions are thrown frequently.
+
+    Note: As of version 1.1.4, packaging data is disabled by default.
+-->
+<configuration packagingData="true">
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <!-- encoders are assigned the type
+             ch.qos.logback.classic.encoder.PatternLayoutEncoder by default -->
+        <encoder>
+            <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <root level="debug">
+        <appender-ref ref="STDOUT" />
+    </root>
+</configuration>

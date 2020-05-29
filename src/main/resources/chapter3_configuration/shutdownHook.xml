@@ -1,0 +1,4 @@
+<configuration debug="true">
+    <!-- in the absence of the class attribute, assume ch.qos.logback.core.hook.DefaultShutdownHook -->
+    <shutdownHook/>
+</configuration>

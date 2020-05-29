@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!-- scanning period by setting the scanPeriod attribute in units of milliseconds, seconds, minutes or hours.
+
+    Note: If no unit of time is specified, then the unit of time is assumed to be milliseconds, which is usually inappropriate.
+    If you change the default scanning period, do not forget to specify a time unit.
+
+    As it is easy to make errors while editing a configuration file, in case the latest version of the configuration file has XML syntax errors,
+    it will fall back to a previous configuration file free of XML syntax errors.
+-->
+<configuration scan="true" scanPeriod="30 seconds">
+
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%d [%thread] %-5level %logger{36} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <root level="debug">
+        <appender-ref ref="STDOUT" />
+    </root>
+
+</configuration>
