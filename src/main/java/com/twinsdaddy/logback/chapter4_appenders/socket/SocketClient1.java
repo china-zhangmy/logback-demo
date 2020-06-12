@@ -15,6 +15,7 @@ public class SocketClient1 {
 
     }
 
+    // java com.twinsdaddy.logback.chapter4_appenders.socket.SocketClient1 localhost 6000
     public static void main(String[] args) throws Exception {
         if(args.length != 2) {
             usage("Wrong number of arguments");

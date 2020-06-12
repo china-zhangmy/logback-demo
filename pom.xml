@@ -16,6 +16,8 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <maven.compiler.source>1.8</maven.compiler.source>
     <maven.compiler.target>1.8</maven.compiler.target>
+
+    <javax.mail.version>1.6.2</javax.mail.version>
   </properties>
 
   <dependencies>
@@ -59,6 +61,17 @@
       <groupId>org.fusesource.jansi</groupId>
       <artifactId>jansi</artifactId>
       <version>1.18</version>
+    </dependency>
+
+    <dependency>
+      <groupId>javax.mail</groupId>
+      <artifactId>javax.mail-api</artifactId>
+      <version>${javax.mail.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>com.sun.mail</groupId>
+      <artifactId>javax.mail</artifactId>
+      <version>${javax.mail.version}</version>
     </dependency>
   </dependencies>
 

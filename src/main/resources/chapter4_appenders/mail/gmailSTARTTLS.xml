@@ -1,0 +1,26 @@
+<configuration>
+
+  <!-- Note that STARTTLS differs from SSL in that, in STARTTLS, the connection is initially non-encrypted
+  and only after the STARTTLS command is issued by the client (if the server supports it) does the connection switch to SSL.
+  In SSL mode, the connection is encrypted right from the start.  -->
+
+  <appender name="EMAIL" class="ch.qos.logback.classic.net.SMTPAppender">
+    <SMTPHost>smtp.gmail.com</SMTPHost>
+    <SMTPPort>587</SMTPPort>
+    <STARTTLS>true</STARTTLS>
+    <Username>YOUR_USERNAME@gmail.com</Username>
+    <Password>YOUR_GMAIL_PASSWORD</Password> 
+    
+    <To>EMAIL-DESTINATION</To>
+    <To>ANOTHER_EMAIL_DESTINATION</To> <!-- additional destinations are possible -->
+    <From>YOUR_USERNAME@gmail.com</From>
+    <Subject>TESTING: %logger{20} - %m</Subject>
+    <layout class="ch.qos.logback.classic.PatternLayout">
+      <Pattern>%date %-5level %logger - %message%n</Pattern>
+    </layout>	    
+  </appender>
+
+  <root level="debug">
+    <appender-ref ref="EMAIL" />
+  </root>  
+</configuration>

@@ -17,6 +17,7 @@ public class SocketClient2 {
         System.exit(1);
     }
 
+    // java -Dhost=localhost -Dport=6000 -DincludeCallerData=false com.twinsdaddy.logback.chapter4_appenders.socket.SocketClient2 target/classes/chapter4_appenders/socket/client1.xml
     public static void main(String[] args) throws Exception {
         if (args.length != 1) {
             usage("Wrong number of arguments.");
